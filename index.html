@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>メモ帳</title>
+</head>
+<body>
+    <h1>メモ帳</h1>
+    <form action="/add_note" method="post">
+        <input type="text" name="note" placeholder="メモを入力してください">
+        <button type="submit">追加</button>
+    </form>
+    <h2>メモ一覧</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
